@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кварц Винил Каталог</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="filter-group">
+                <label for="price-toggle" class="filter-label">Цена ₽/м²:</label>
+                <input type="checkbox" id="price-toggle" class="toggle-input">
+                <div class="filter-content">
+                    <input type="range" min="0" max="3000" value="1500" class="slider" id="price-range">
+                    <div class="price-inputs">
+                        <div class="price-label">от</div>
+                        <input type="number" min="0" max="3000" value="0" id="price-min">
+                        <span>—</span>
+                        <div class="price-label">до</div>
+                        <input type="number" min="0" max="3000" value="3000" id="price-max">
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="purpose-toggle" class="filter-label">Назначение:</label>
+                <input type="checkbox" id="purpose-toggle" class="toggle-input">
+                <div class="filter-content">
+                    <label><input type="checkbox" value="Для стен"> Для стен</label>
+                    <label><input type="checkbox" value="Для пола"> Для пола</label>
+                    <label><input type="checkbox" value="Универсальная"> Универсальная</label>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="pattern-toggle" class="filter-label">Рисунок:</label>
+                <input type="checkbox" id="pattern-toggle" class="toggle-input">
+                <div class="filter-content">
+                    <label><input type="checkbox" value="Дерево"> Дерево</label>
+                    <label><input type="checkbox" value="Камень"> Камень</label>
+                    <label><input type="checkbox" value="Мармор"> Мармор</label>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="shade-toggle" class="filter-label">Оттенок:</label>
+                <input type="checkbox" id="shade-toggle" class="toggle-input">
+                <div class="filter-content">
+                    <label><input type="checkbox" value="Черный"><svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 25.5C10.8585 25.5 9.23303 25.1767 7.71646 24.5485C6.19989 23.9203 4.8219 22.9996 3.66116 21.8388C2.50043 20.6781 1.57969 19.3001 0.951505 17.7835C0.323322 16.267 -6.18146e-07 14.6415 -5.46392e-07 13C-4.74639e-07 11.3585 0.323322 9.73303 0.951505 8.21646C1.57969 6.69989 2.50043 5.3219 3.66117 4.16116C4.8219 3.00043 6.19989 2.07969 7.71646 1.4515C9.23303 0.823321 10.8585 0.499999 12.5 0.499999L12.5 13L12.5 25.5Z" fill="#404040"/>
+                        <path d="M12.5 0.5C14.1415 0.5 15.767 0.823322 17.2835 1.45151C18.8001 2.07969 20.1781 3.00043 21.3388 4.16117C22.4996 5.3219 23.4203 6.69989 24.0485 8.21646C24.6767 9.73303 25 11.3585 25 13C25 14.6415 24.6767 16.267 24.0485 17.7835C23.4203 19.3001 22.4996 20.6781 21.3388 21.8388C20.1781 22.9996 18.8001 23.9203 17.2835 24.5485C15.767 25.1767 14.1415 25.5 12.5 25.5L12.5 13L12.5 0.5Z" fill="black"/>
+                        </svg>
+                        Черный</label>
+                    <label><input type="checkbox" value="Коричневый"> <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 25.5C10.8585 25.5 9.23303 25.1767 7.71646 24.5485C6.19989 23.9203 4.8219 22.9996 3.66116 21.8388C2.50043 20.6781 1.57969 19.3001 0.951505 17.7835C0.323322 16.267 -6.18146e-07 14.6415 -5.46392e-07 13C-4.74639e-07 11.3585 0.323322 9.73303 0.951505 8.21646C1.57969 6.69989 2.50043 5.3219 3.66117 4.16116C4.8219 3.00043 6.19989 2.07969 7.71646 1.4515C9.23303 0.823321 10.8585 0.499999 12.5 0.499999L12.5 13L12.5 25.5Z" fill="#97826F"/>
+                        <path d="M12.5 0.5C14.1415 0.5 15.767 0.823322 17.2835 1.45151C18.8001 2.07969 20.1781 3.00043 21.3388 4.16117C22.4996 5.3219 23.4203 6.69989 24.0485 8.21646C24.6767 9.73303 25 11.3585 25 13C25 14.6415 24.6767 16.267 24.0485 17.7835C23.4203 19.3001 22.4996 20.6781 21.3388 21.8388C20.1781 22.9996 18.8001 23.9203 17.2835 24.5485C15.767 25.1767 14.1415 25.5 12.5 25.5L12.5 13L12.5 0.5Z" fill="#4F3B30"/>
+                        </svg>
+                         Коричневый</label>
+                    <label><input type="checkbox" value="Красный"> <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 25.5C10.8585 25.5 9.23303 25.1767 7.71646 24.5485C6.19989 23.9203 4.8219 22.9996 3.66116 21.8388C2.50043 20.6781 1.57969 19.3001 0.951505 17.7835C0.323322 16.267 -6.18146e-07 14.6415 -5.46392e-07 13C-4.74639e-07 11.3585 0.323322 9.73303 0.951505 8.21646C1.57969 6.69989 2.50043 5.3219 3.66117 4.16116C4.8219 3.00043 6.19989 2.07969 7.71646 1.4515C9.23303 0.823321 10.8585 0.499999 12.5 0.499999L12.5 13L12.5 25.5Z" fill="#F38E8E"/>
+                        <path d="M12.5 0.5C14.1415 0.5 15.767 0.823322 17.2835 1.45151C18.8001 2.07969 20.1781 3.00043 21.3388 4.16117C22.4996 5.3219 23.4203 6.69989 24.0485 8.21646C24.6767 9.73303 25 11.3585 25 13C25 14.6415 24.6767 16.267 24.0485 17.7835C23.4203 19.3001 22.4996 20.6781 21.3388 21.8388C20.1781 22.9996 18.8001 23.9203 17.2835 24.5485C15.767 25.1767 14.1415 25.5 12.5 25.5L12.5 13L12.5 0.5Z" fill="#E64848"/>
+                        </svg>
+                        Красный</label>
+                </div>
+            </div>
+            <div class="filter-group filter-btn-group">
+                <button class="filter-btn reset-btn">Сбросить</button>
+            </div>
+        </div>
+        <div class="catalog">
+            <div class="item" data-price="1490" data-purpose="Для пола" data-pattern="Дерево" data-shade="Коричневый">
+                <div class="item-image">
+                    <img src="1.jpg" alt="Product Image">
+                </div>
+                <h4>SPC Ламинат Royce Emotion Дуб Моксей EM-609</h4>
+                <div class="descr">
+                    <p class="details">42 класс 5 мм</p>
+                    <p class="price">1590 ₽ / М2</p>
+                </div>
+                <a href="#" class="buy-btn">Купить</a>
+            </div>
+            <div class="item" data-price="1590" data-purpose="Для стен" data-pattern="Камень" data-shade="Черный">
+                <div class="item-image">
+                    <img src="2.jpg" alt="Product Image">
+                </div>
+                <h4>SPC Ламинат Royce Emotion Дуб Моксей EM-610</h4>
+                <div class="descr">
+                    <p class="details">42 класс 5 мм</p>
+                    <p class="price">1590 ₽ / М2</p>
+                </div>
+                <a href="#" class="buy-btn">Купить</a>
+            </div>
+            <div class="item" data-price="1490" data-purpose="Универсальная" data-pattern="Мармор" data-shade="Красный">
+                <div class="item-image">
+                    <img src="3.jpg" alt="Product Image">
+                </div>
+                <h4>SPC Ламинат Royce Emotion Дуб Моксей EM-609</h4>
+                <div class="descr">
+                    <p class="details">42 класс 5 мм</p>
+                    <p class="price">1590 ₽ / М2</p>
+                </div>
+                <a href="#" class="buy-btn">Купить</a>
+            </div>
+            <div class="item" data-price="1490" data-purpose="Для пола" data-pattern="Дерево" data-shade="Коричневый">
+                <div class="item-image">
+                    <img src="4.jpg" alt="Product Image">
+                </div>
+                <h4>SPC Ламинат Royce Emotion Дуб Моксей EM-609</h4>
+                <p class="details">42 класс 4 мм</p>
+                <p class="price">1490 ₽ / М2</p>
+                <a href="#" class="buy-btn">Купить</a>
+            </div>
+            <div class="item" data-price="1490" data-purpose="Для пола" data-pattern="Камень" data-shade="Красный">
+                <div class="item-image">
+                    <img src="5.jpg" alt="Product Image">
+                </div>
+                <h4>SPC Ламинат Royce Emotion Дуб Моксей EM-609</h4>
+                <p class="details">42 класс 4 мм</p>
+                <p class="price">1490 ₽ / М2</p>
+                <a href="#" class="buy-btn">Купить</a>
+            </div>
+            <div class="item" data-price="1490" data-purpose="Для стен" data-pattern="Мармор" data-shade="Коричневый">
+                <div class="item-image">
+                    <img src="6.jpg" alt="Product Image">
+                </div>
+                <h4>SPC Ламинат Royce Emotion Дуб Моксей EM-609</h4>
+                <p class="details">42 класс 4 мм</p>
+                <p class="price">1490 ₽ / М2</p>
+                <a href="#" class="buy-btn">Купить</a>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

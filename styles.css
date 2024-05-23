@@ -1,0 +1,344 @@
+@font-face{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-style: normal;
+    src: url('./fonts/Manrope-Regular.eot'); /* IE9 Compat Modes */
+    src: url('./fonts/Manrope-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./fonts/Manrope-Regular.woff2') format('woff2'), /* Modern Browsers */
+    url('./fonts/Manrope-Regular.woff') format('woff'), /* Modern Browsers */
+    url('./fonts/Manrope-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: "Manrope";
+    font-weight: 500;
+    font-style: normal;
+    src: url('./fonts/Manrope-Medium.eot'); /* IE9 Compat Modes */
+    src: url('./fonts/Manrope-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./fonts/Manrope-Medium.woff2') format('woff2'), /* Modern Browsers */
+    url('./fonts/Manrope-Medium.woff') format('woff'), /* Modern Browsers */
+    url('./fonts/Manrope-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: "Manrope";
+    font-weight: 600;
+    font-style: normal;
+    src: url('./fonts/Manrope-SemiBold.eot'); /* IE9 Compat Modes */
+    src: url('./fonts/Manrope-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./fonts/Manrope-SemiBold.woff2') format('woff2'), /* Modern Browsers */
+    url('./fonts/Manrope-SemiBold.woff') format('woff'), /* Modern Browsers */
+    url('./fonts/Manrope-SemiBold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: "Manrope";
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: normal;
+    src: url('./fonts/Manrope-Bold.eot'); /* IE9 Compat Modes */
+    src: url('./fonts/Manrope-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./fonts/Manrope-Bold.woff2') format('woff2'), /* Modern Browsers */
+    url('./fonts/Manrope-Bold.woff') format('woff'), /* Modern Browsers */
+    url('./fonts/Manrope-Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: Manrope;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 3.125rem;
+}
+
+.sidebar {
+    width: 22.875rem;
+    margin-right: 6.25rem;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-label {
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.313rem;
+    font-weight: 400;
+    line-height: 31.5px;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-input:checked + .filter-content {
+    display: block;
+}
+
+.filter-content {
+    display: none;
+    margin-top: 10px;
+    font-size: 1.313rem;
+    font-weight: 400;
+    line-height: 31.5px;
+}
+
+.filter-content label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.filter-content input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-content input[type="checkbox"]:checked::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.slider {
+    width: 100%;
+}
+
+.price-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price-inputs .price-label {
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+.price-inputs input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.more-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    border-bottom: 1px solid #000;
+    width: fit-content;
+}
+
+.filter-btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-btn {
+    width: calc(50% - 10px);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    background-color: #ccc;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #bbb;
+}
+
+.catalog {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    max-width: 84.688rem;
+}
+
+
+
+.item {
+    border-radius: 15px;
+    max-width: 26.563rem;
+    flex-grow: 1; /* Добавляем возможность занимать доступное пространство */
+    box-sizing: border-box;
+    background-color: #F4F4F6;
+    text-align: left;
+    background: #F4F4F6;
+}
+
+
+.catalog .item-image {
+    position: relative;
+    text-align: center; /* Выравнивание по центру */
+    overflow: hidden;
+}
+
+.catalog .item img {
+    width: 100%;
+    height: auto; /* Удалим ограничение по высоте */
+    border-radius: 10px 10px 0 0;
+}
+
+.catalog .item .badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.catalog .item .badge {
+    background-color: #E0FB52;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.catalog .item .badge.new {
+    background-color: #fff;
+}
+
+.catalog .item h4 {
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #000;
+    font-size: 1.313rem;
+    margin-left: 1.25rem;
+    font-weight: 500;
+    line-height: 1.706rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.catalog .item .descr {
+    margin-right: 10px;
+}
+
+
+
+.catalog .item .details {
+    font-size: 1.125rem;
+    color: rgba(0, 0, 0, 0.50);
+    text-align: right;
+    font-weight: 500;
+    line-height: 1.463rem;
+    margin: 0;
+}
+
+.catalog .item .price {
+    margin: 0;
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 39px;
+    margin-bottom: 10px;
+    text-align: right; /* Выравнивание по правому краю */
+}
+
+.catalog .item .price-toggle {
+    color: #000;
+}
+
+.catalog .item .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+.catalog .item .buy-btn {
+    display: block;
+    width: 24.063rem;
+    padding: 15px 0;
+    margin: 1.25rem;
+    background-color: #F4F4F6;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 3.125rem;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid black;
+}
+
+.catalog .item .buy-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Добавляем стили для ползунка */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #000; /* Цвет ползунка */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #000; /* Цвет ползунка */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 24px;
+    height: 24px;
+    background: #000; /* Цвет ползунка */
+    cursor: pointer;
+    border-radius: 50%;
+}
